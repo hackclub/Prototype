@@ -1,9 +1,6 @@
-# Events
+# Prototype Hackathon Resources
 
-**:new: :hourglass_flowing_sand: [Dec. 2025] AMD OPEN ROBOTICS HACKATHON 2025 is coming. Click [here](https://amdroboticshackathon.datamonsters.com/) to join. 🔥**
-
-
-In this challenge, participants are invited to form teams of up to 4 members to build solutions using Hugging Face LeRobot. The goal is to develop a LeRobot application which can help solve real-world problems demonstrating technical proves, creativity and usability.
+In this challenge, participants are invited to form teams of up to 3 members to build solutions using Hugging Face LeRobot. The goal is to develop a LeRobot application which can help solve real-world problems demonstrating technical proves, creativity and usability.
 
 
 # Guide of AMD_Robotics_Hackathon_2025
