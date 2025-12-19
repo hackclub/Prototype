@@ -107,8 +107,7 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-`top` camera with index_or_path 0 (/dev/video0)
-`side` camera with index_or_path 2 (/dev/video2)
+In this example, `top` camera has index_or_path 0 (/dev/video0) and `side` camera has index_or_path 2 (/dev/video2).
 
 ## Record the dataset
 
