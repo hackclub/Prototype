@@ -10,7 +10,6 @@ Please do the item ahead to join the Hackathon in field. That would save your ti
 
 # FAQ
 
-
 1. How to get support for LeRobot with AI?
 
     A: Recommend to chat with deepwiki for using LeRobot by https://deepwiki.com/huggingface/lerobot or other LLM tools you want.
@@ -23,21 +22,24 @@ Please do the item ahead to join the Hackathon in field. That would save your ti
 
     A: please use tar the files which you want to download first in terminal of Jupyter Notebook and then download it.
     The example tar command,
-    
+
     ```shell
     tar cjvf your_model.tar.bz2 your_model
     ```
 
-4. Why do I get error like `Runtime Error: Could not push packet to decoder: Invalid data found when processing input` during `lerobot-train`?    
-   A: It indicates that one of the video files in your dataset is corrupted.  The command `ffmpeg -v error -i file-000.mp4 -f null -` is a diagnostic command used to check a video file for corruption.    
-    Here is the breakdown of each part:    
+4. Why do I get error like `Runtime Error: Could not push packet to decoder: Invalid data found when processing input` during `lerobot-train`?
+
+    A: It indicates that one of the video files in your dataset is corrupted. The command `ffmpeg -v error -i file-000.mp4 -f null -` is a diagnostic command used to check a video file for corruption.  
+     Here is the breakdown of each part:
+
     - `ffmpeg`: The command-line tool for processing video and audio.
     - `-v error`: Sets the logging verbosity to error. This means ffmpeg will run silently and only print text if it encounters an actual error (like a corrupted frame or header). If the file is healthy, it will produce no output.
     - `-i file-000.mp4`: Specifies the input file you want to check.
     - `-f null: Sets the output format to null. This is a special format that discards all output data. It tells ffmpeg to go through the process of decoding the video (which reveals corruption) but not to actually write the video anywhere.
-    - `-`: Specifies the output destination as standard output (stdout). Combined with -f null, this effectively sends the decoded data to "nowhere" (/dev/null).    
-    **In summary**: It forces your computer to decode every single frame of the video but throw away the result. If any frame is broken, ffmpeg will scream about it in the terminal. If the terminal stays silent, the video is valid.    
-    The most common root cause for video corruption in datasets is **Interrupted Recording/Writing**. The recording process (the robot collection script) was killed (SIGINT/Ctrl+C) or crashed while it was writing the video file.
+    - `-`: Specifies the output destination as standard output (stdout). Combined with -f null, this effectively sends the decoded data to "nowhere" (/dev/null).  
+      **In summary**: It forces your computer to decode every single frame of the video but throw away the result. If any frame is broken, ffmpeg will scream about it in the terminal. If the terminal stays silent, the video is valid.  
+      The most common root cause for video corruption in datasets is **Interrupted Recording/Writing**. The recording process (the robot collection script) was killed (SIGINT/Ctrl+C) or crashed while it was writing the video file.
 
+5. How to edit your dataset of lerobot?
 
-
+    A: Going to [using dataset tools](https://huggingface.co/docs/lerobot/using_dataset_tools)

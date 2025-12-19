@@ -1,10 +1,10 @@
-# QuickStart 
+# QuickStart
 
-To set up the lerobot development environment for both edge and cloud with AMD ROCm Platform.
+To set up the LeRobot development environment for both edge and cloud with AMD ROCm Platform.
 
 ## Setup the Edge Development
 
-The edge platform is based on AMD Ryzen AI PC for driving the SO101-ARM for create dataset and inference. The iGPU of the Ryzen AI Processor do accerate the model inference base on ROCm.
+The edge platform is based on an AMD Ryzen AI PC, which is used to drive the SO-101 ARM for dataset creation and inference. The integrated GPU (iGPU) of the Ryzen AI processor accelerates model inference using ROCm.
 
 ### Target Enviroment
 
@@ -17,20 +17,6 @@ LeRobot: v0.4.1
 ```
 
 ### Pre-requisites
-
-#### Set the VRAM size to 16GB+ in BIOS
-
-The BIOS UI may be different from vendors. You should refer to the User Guide about the BIOS setting of which PC you use. 
-
-Here are two examples for reference,
-
-```
-Enter the BIOS Setup => Advanced => GFX Configuration => UMA Frame buffer Size => 16GB
-```
-
-```
-Enter the BIOS Setup => Advanced => AMD CBS => NBIO Common Options => GFX Configuration => Dedicated Graphics Memory => 16GB
-```
 
 #### Install Ubuntu 24.04 LTS on the AMD Ryzen AI PC
 
@@ -62,15 +48,15 @@ video                  77824  1 amdgpu
 
 ### Setup the ROCm Development Environment for the LeRobot
 
-At now [2025/11],  LeRobot depends on PyTorch version >=2.2.1, <2.8.0 (see `pyproject.toml` )
+As of now (2025/11), LeRobot depends on PyTorch version >=2.2.1, <2.8.0 (see `pyproject.toml`).
 
-So that we recommend using ROCm 6.3 and PyTorch 2.7 combination to make compatible with LeRobot.
+We recommend using ROCm 6.3 and PyTorch 2.7 to ensure compatibility with LeRobot.
 
 #### Install ROCm 6.3.x,
 
-``` shell
+```shell
 sudo apt update
-sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
+sudo apt install "linux-headers-$(uname -r)"
 sudo apt install python3-setuptools python3-wheel
 sudo usermod -a -G render,video $LOGNAME # Add the current user to the render and video groups
 
@@ -82,29 +68,26 @@ amdgpu-install -y --usecase=rocm --no-dkms
 sudo reboot
 ```
 
-**NOTE**: --no-dkms , Do not install dkms and use built-in kernel driver
+**NOTE**: Ensure `--no-dkms` is set so the built-in kernel driver is used.
 
-You could get more details from https://rocm.docs.amd.com/projects/radeon-ryzen/en/docs-6.3.4/docs/install/native_linux/install-radeon.html
+For more details, refer to the official documentation: https://rocm.docs.amd.com/projects/radeon-ryzen/en/docs-6.3.4/docs/install/native_linux/install-radeon.html.
 
 #### Install PyTorch with ROCm
 
-To repeat
-At now [2025/10],  LeRobot depends on PyTorch version >=2.2.1, <2.8.0 (see `pyproject.toml` )
+Since LeRobot depends on PyTorch version >=2.2.1, <2.8.0 (see `pyproject.toml`) and the latest PyTorch-ROCm version is v2.8.0+, we must install an older ROCm-compatible PyTorch release.
 
-But PyTorch.org supports PyTorch-ROCm latest version is v2.8.0+. So that we need to install the previous-versions of PyTorch-ROCm.
+The LeRobot GitHub repository uses Miniconda for environment management. We can use the same approach with minor modifications for PyTorch-ROCm.
 
-
-LeRobot github repo using miniconda as example to create the venv for development. But it is use PyTorch-CUDA as default. Let’s follow it to create venv with minor changes in steps for PyTorch-ROCm.
-
-Set the iGPU of Ryzen AI 300 series run at gfx1100 compatilbe mode by, 
+Set the iGPU on Ryzen AI 300 series to run at gfx1100 compatible mode:
 
 ```
 echo "export HSA_OVERRIDE_GFX_VERSION=11.0.0" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-Click [Here](https://www.anaconda.com/docs/getting-started/miniconda/install) about How to Install miniconda: 
+Install Miniconda following the official docs: https://www.anaconda.com/docs/getting-started/miniconda/install.
 
+Then, you can create a conda environment and install the compatible PyTorch versions.
 
 ```shell
 conda create -n lerobot python=3.10
@@ -120,22 +103,23 @@ torchaudio             2.7.1+rocm6.3
 torchvision            0.22.1+rocm6.3
 ```
 
-Now the iGPU of Ryzen AI APU will worked as a CUDA compatible device within PyTorch.
+Now, the Ryzen AI iGPU will appear as a CUDA-compatible device in PyTorch.
 
 ```shell
 python3 -c 'import torch; print(torch.cuda.is_available())'
 ```
+
 It will get `True`.
 
 ```shell
 python3 -c "import torch; print(f'device name [0]:', torch.cuda.get_device_name(0))"
 ```
+
 It will get ` device name [0]: AMD Radeon Graphics`.
 
+#### Setup LeRobot Development Environment
 
-#### Setup LeRobot development Environment
-
-Follow the Installation in https://github.com/huggingface/lerobot/blob/main/README.md  
+More installation info can be found at https://github.com/huggingface/lerobot/blob/main/README.md.
 
 ```shell
 conda install ffmpeg=7.1.1 -c conda-forge
@@ -151,6 +135,7 @@ pip install -e .
 ```
 
 Check the Installation
+
 ```shell
 pip list | grep lerobot
 lerobot                0.4.1          /home/alex/lerobot
@@ -162,21 +147,17 @@ Install the feetech-servo-sdk for SO-ARM101 in this Hackation.
 pip install 'lerobot[feetech]'      # Feetech motor support
 ```
 
-The edge development environment is ready. Please refer the [LeRobot Documentation] (https://huggingface.co/docs/lerobot/index)
-for the calibarion, teleop, creating dataset and inference evalution with the SO-101 ARM.
+The edge development environment is ready. Please refer to the [so101_example.md](so101_example.md) for the calibration, teleop, dataset collection, and inference evalution with the SO-101 ARM.
 
-
-
-## Setup the training environment
+## Setup the Training Environment
 
 Please refer to [training-models-on-rocm.ipynb](training-models-on-rocm.ipynb)
 
-## Ready to go
+## Ready To Go
 
-Get start your hackathon challenge with LeRobot. 
+Get start your hackathon challenge with LeRobot.
 
 Good Luck~
-
 
 ## Reference
 
