@@ -7,8 +7,7 @@ echo "System info"
 lsb_release -a
 uname -r
 lsmod | grep amdgpu
-printf "%s " "Press enter to continue!"
-read ans
+read -p "Verify the above info, then press continue to start installing packages! You will be asked for your user password"
 
 # Install sys packages
 sudo apt update
@@ -18,4 +17,5 @@ sudo usermod -a -G render,video $LOGNAME
 wget https://repo.radeon.com/amdgpu-install/6.3.4/ubuntu/noble/amdgpu-install_6.3.60304-1_all.deb
 sudo apt install ./amdgpu-install_6.3.60304-1_all.deb
 amdgpu-install -y --usecase=rocm --no-dkms
+read -p "Everything just got installed, press enter to reboot!"
 sudo reboot now

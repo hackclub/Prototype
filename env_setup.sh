@@ -9,15 +9,13 @@ conda activate lerobot
 pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/rocm6.3
 pip list | grep rocm
 
-printf "%s " "Check your packages match the docs!"
-read ans
+read -p "Check your packages match the docs!"
 
 # Check for CUDA compatible device
 python3 -c 'import torch; print(torch.cuda.is_available())'
 python3 -c "import torch; print(f'device name [0]:', torch.cuda.get_device_name(0))"
 
-printf "%s " "Should read True and list AMD Radeon Graphics"
-read ans
+read -p "Should read True and list AMD Radeon Graphics"
 
 # Set up LeRobot dev env
 conda install ffmpeg=7.1.1 -c conda-forge

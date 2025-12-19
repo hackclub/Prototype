@@ -11,13 +11,13 @@ In this challenge, participants are invited to form teams of 3 to build awesome 
 _Having issues? You can also set this up by running the following commands:_
 
 ```
-curl https://raw.githubusercontent.com/hackclub/Prototype/refs/heads/main/sys_setup.sh | bash
+wget -qO- https://raw.githubusercontent.com/hackclub/Prototype/refs/heads/main/sys_setup.sh | bash
 ```
 
 _This will install some firmware and reboot your system. Afterwards, run:_
 
 ```
-curl https://raw.githubusercontent.com/hackclub/Prototype/refs/heads/main/env_setup.sh | bash
+wget -qO- https://raw.githubusercontent.com/hackclub/Prototype/refs/heads/main/env_setup.sh | bash
 ```
 
 2. Request a training environment with an AMD MI300X GPU by going to the provided link (link will only be available during the Hackathon and requires authorization).
