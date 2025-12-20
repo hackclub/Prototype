@@ -184,7 +184,7 @@ The checkpoints are generated in `./outputs/train/act_so101_test/checkpoints/` a
 
 ## Inference Evaluation
 
-Download the model from Hugging Face onto your Ryzen laptop for inference evaluation.
+Download the trained model from Hugging Face onto your Ryzen laptop for inference evaluation.
 
 ```
 lerobot-record \
