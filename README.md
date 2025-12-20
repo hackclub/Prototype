@@ -2,9 +2,9 @@
 
 In this challenge, participants are invited to form teams of 3 to build awesome projects with using Hugging Face LeRobot.
 
-# Guide for SO-101 setup
+# Guide for Hackathon
 
-1. QuickStart for setting up LeRobot Development Environment with AMD Edge ROCm platform.
+1. QuickStart for setting up LeRobot Development Environment with AMD Edge ROCm platform on the AMD Ryzen PC.
 
     [QuickStart.md](QuickStart.md)
 
