@@ -200,7 +200,7 @@ lerobot-record \
   --dataset.single_task="pickup the cube and place it to the bin" \
   --dataset.repo_id=${HF_USER}/eval_act_base \
   --dataset.root=${PWD}/eval_lerobot_dataset/ \
-  --dataset.episode_time_s=30 \
+  --dataset.episode_time_s=60 \
   --dataset.num_episodes=1 \
   --policy.path=${HF_USER}/act_so101_cube_15ksteps/ \ # path to the pretrained_model
   --dataset.push_to_hub=false
