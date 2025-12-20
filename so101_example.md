@@ -148,7 +148,7 @@ lerobot-record \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.num_episodes=10 \
+    --dataset.num_episodes=5 \
     --dataset.episode_time_s=30 \
     --dataset.reset_time_s=10 \
     --dataset.single_task="pickup the cube and place it to the bin" \
@@ -202,7 +202,7 @@ lerobot-record \
   --dataset.root=${PWD}/eval_lerobot_dataset/ \
   --dataset.episode_time_s=60 \
   --dataset.num_episodes=1 \
-  --policy.path=${HF_USER}/act_so101_cube_15ksteps/ \ # path to the pretrained_model
+  --policy.path=${HF_USER}/act_so101_cube_15ksteps \ # path to the pretrained_model
   --dataset.push_to_hub=false
 ```
 
