@@ -197,12 +197,12 @@ lerobot-record \
   --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_follower_arm \
   --robot.cameras="{wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 4, width: 640, height: 480, fps: 30}}" \
-  --dataset.single_task="Pick cube from source position and stack it on the fixed cube at target position" \
+  --dataset.single_task="pickup the cube and place it to the bin" \
   --dataset.repo_id=${HF_USER}/eval_act_base \
   --dataset.root=${PWD}/eval_lerobot_dataset/ \
-  --dataset.episode_time_s=20 \
+  --dataset.episode_time_s=30 \
   --dataset.num_episodes=1 \
-  --policy.path=${HF_USER}/pretrained_model/ \ # path to the pretrained_model
+  --policy.path=${HF_USER}/act_so101_cube_15ksteps/ \ # path to the pretrained_model
   --dataset.push_to_hub=false
 ```
 
