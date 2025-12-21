@@ -1,4 +1,4 @@
-![Prototype Banner](assets/AMD_HackClub_Prototype_Banner.png)
+![Prototype Banner](assets/banner.jpg)
 
 In this challenge, participants are invited to form teams of 3 to build awesome projects with using Hugging Face LeRobot.
 
