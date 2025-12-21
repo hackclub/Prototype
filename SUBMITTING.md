@@ -78,4 +78,4 @@ Only provide (upload) the wandb of your last success pre-trained model for the M
 
 ## Submission form
 
-The submission form will be available here closer to the submission deadline.
+(https://forms.hackclub.com/t/1M4HLEdizvus)[Submit Here!]
