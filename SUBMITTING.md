@@ -59,7 +59,7 @@ outputs/train/smolvla_so101_2cube_30k_steps/wandb/
   │ └── debug.log
   ├── run-tz1cpo59.wandb
   └── tmp
-  └── code
+    └── code
 ```
 
 NOTES
