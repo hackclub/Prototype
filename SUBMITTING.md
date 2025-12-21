@@ -6,6 +6,8 @@
 -   Team name + Team Number + GitHub Usernames of your teammates
 -   Picture of your project
 -   Description of your project!
+-   A full wiring diagram!
+-   List of hardware components used (BOM-style, prices not necessary)
 -   A full video demo of your project working!
 -   Anything else you'd like to add!
 -   MORE PICTURES!!!
@@ -13,7 +15,7 @@
 ### In your repository:
 
 -   ALL 3D models used in .STEP format (unless they were made in tinkercad)
--   there is a mission directory that contains your weights
+-   there is a mission directory that contains your models, training logs, and weights! See the instructions below
 
 ## The `mission` folder
 
