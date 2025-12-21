@@ -147,11 +147,14 @@ Install the feetech-servo-sdk for SO-ARM101 in this Hackation.
 pip install 'lerobot[feetech]'      # Feetech motor support
 ```
 
-The edge development environment is ready. Please refer to the [so101_example.md](so101_example.md) for the calibration, teleop, dataset collection, and inference evalution with the SO-101 ARM.
+The edge development environment is ready. 
+
+## Setup the SO-101 arms
+Please refer to the [so101_example.md](so101_example.md) for the calibration, teleop, dataset collection, and inference evalution with the SO-101 ARM.
 
 ## Setup the Training Environment
 
-Please refer to [training-models-on-rocm.ipynb](training-models-on-rocm.ipynb)
+Head to your AMD Developer Cloud instance to do the training on the MI300X. The training notebook will already be loaded there ([training-models-on-rocm.ipynb](./training-models-on-rocm.ipynb)). More Hugging Face + LeRobot instructions can be found here: https://huggingface.co/docs/lerobot/il_robots#train-a-policy.
 
 ## Ready To Go
 

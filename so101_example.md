@@ -25,12 +25,17 @@ LeRobot provides the command `lerobot-find-port` to help find the UART device no
 
 ## Connect the Cameras
 
-Suppose you have two cameras, one named `top` and another named `side`. The `top` camera may be set up to give a bird's eye view of the arm's workspace. The `side` camera may be set up to give a side view.
+Suppose you have three cameras named `wrist`, `side`, and `top`. The `top` camera may be set up to give a bird's eye view of the ARM's workspace. The `side` camera may be set up to give a side view.
+
+1. Connect the `wrist` camera and it will get `/dev/video0`.
+2. Connect the `side` camera and it will get `/dev/video2`.
+3. Connect the `top` camera and it will get `/dev/video4`.
 
 The sequence of the connection of the cameras will result in different device node names. The following steps assume the following names:
 
--   Top camera: `/dev/video0`
+-   Wrist camera: `/dev/video0`
 -   Side camera: `/dev/video2`
+-   Top camera: `/dev/video4`
 
 Use the lerobot-find-cameras CLI tool to detect available cameras:
 
@@ -100,15 +105,14 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{top: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 4, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
 
-`top` camera with index_or_path 0 (/dev/video0)
-`side` camera with index_or_path 2 (/dev/video2)
+In this example, `wrist` camera has index_or_path 0 (/dev/video0), `side` camera has index_or_path 2 (/dev/video2), and `top` camera has index_or_path 4 (/dev/video4).
 
 ## Record the dataset
 
@@ -138,27 +142,27 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{top: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --robot.cameras="{wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 4, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.num_episodes=60 \
-    --dataset.episode_time_s=20 \
+    --dataset.num_episodes=5 \
+    --dataset.episode_time_s=30 \
     --dataset.reset_time_s=10 \
     --dataset.single_task="pickup the cube and place it to the bin" \
     --dataset.root=${HOME}/so101_dataset/
 ```
 
--   `--dataset.num_episodes=60` means we will record 60 teleoperation sessions.
--   `--dataset.episode_time_s=20` means each episode has 20 seconds; this depends on whether it is enough time for your actions.
+**Use `--resume=true` in the command to continue the dataset recording.**
+
+-   `--dataset.num_episodes=10` means we will record 10 teleoperation sessions.
+-   `--dataset.episode_time_s=30` means each episode has 30 seconds; this depends on whether it is enough time for your actions.
 -   `--dataset.reset_time_s=10` means the reset time between episodes. You may use this time slot to reset your environment, like recovering the position of the cube to the source by hand and waiting to start the next episode recording.
 -   `--dataset.root=${HOME}/stack2cube_dataset` means where your dataset will be saved.
 
 The terminal has logs to notify you when new episodes start, reset, and when the dataset is recorded.
-
-You can use `Ctrl-c` to stop the recording. Use `--resume=true` in the command to continue the dataset recording with the num_episodes added.
 
 To get more detials about the instructions of record from `https://huggingface.co/docs/lerobot/il_robots#record-a-dataset`
 
@@ -179,26 +183,26 @@ Then, change the Ubuntu GUI settings by logging out of your laptop and, in the l
 
 ## Training
 
-Refer to the [QuickStart.md](QuickStart.md) to do the training with MI300X on AMD Development Cloud and the Hugging Face + LeRobot instructions here: https://huggingface.co/docs/lerobot/il_robots#train-a-policy.
+Head to your AMD Developer Cloud instance to do the training on the MI300X. The training notebook will already be loaded there ([training-models-on-rocm.ipynb](./training-models-on-rocm.ipynb)). More Hugging Face + LeRobot instructions can be found here: https://huggingface.co/docs/lerobot/il_robots#train-a-policy.
 
 The checkpoints are generated in `./outputs/train/act_so101_test/checkpoints/` and the last one is `./outputs/train/act_so101_test/checkpoints/last/pretrained_model/`
 
 ## Inference Evaluation
 
-Copy the `pretrained_model` under `./outputs/train/act_so101_test/` from cloud back to the Edge platform (PC) for inference evaluation.
+Download the trained model from Hugging Face onto your Ryzen laptop for inference evaluation.
 
 ```
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM1 \
   --robot.id=my_awesome_follower_arm \
-  --robot.cameras="{top: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
-  --dataset.single_task="Pick cube from source position and stack it on the fixed cube at target position" \
-  --dataset.repo_id=alexhegit/eval_act_base \
+  --robot.cameras="{wrist: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 4, width: 640, height: 480, fps: 30}}" \
+  --dataset.single_task="pickup the cube and place it to the bin" \
+  --dataset.repo_id=${HF_USER}/eval_act_base \
   --dataset.root=${PWD}/eval_lerobot_dataset/ \
-  --dataset.episode_time_s=20 \
+  --dataset.episode_time_s=60 \
   --dataset.num_episodes=1 \
-  --policy.path=${PWD}/outputs/train/act_so101_test/checkpoints/last/pretrained_model/ \ # path to the pretrained_model
+  --policy.path=${HF_USER}/act_so101_cube_15ksteps \ # path to the pretrained_model
   --dataset.push_to_hub=false
 ```
 
