@@ -15,7 +15,8 @@
 ### In your repository:
 
 -   ALL 3D models used in .STEP format (unless they were made in tinkercad)
--   there is a mission directory that contains your models, training logs, and weights! See the instructions below
+-   A TRAINING.md file that quickly explains how you trained your model (i.e _we made this project into 3 separate tasks and trained separate models so that we could do multiple at once. we used one camera above, one below, etc....._)
+-   there is a mission directory that contains your models, training logs, and weights! See the instructions below:
 
 ## The `mission` folder
 
