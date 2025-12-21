@@ -18,6 +18,14 @@
 -   A TRAINING.md file that quickly explains how you trained your model (i.e _we made this project into 3 separate tasks and trained separate models so that we could do multiple at once. we used one camera above, one below, etc....._)
 -   there is a mission directory that contains your models, training logs, and weights! See the instructions below:
 
+```
+your-repository/
+├── README.md
+├── TRAINING.md
+└── mission
+  └── <see below>
+```
+
 ## The `mission` folder
 
 Here's an example repo provided by AMD!
@@ -27,11 +35,12 @@ https://github.com/AlexHe99/AMD_Robotics_Hackathon_2025_ProjectTemplate
 Directory tree of an example repo, you need to fill in the `mission` directory with your submission details.
 
 ```
-AMD_Robotics_Hackathon_2025_ProjectTemplate-main/
-├── README.md
+<other stuff>
 └── mission
   ├── code
-  │ └── <code and script>
+  │ └── <code and scripts>
+  ├── hardware
+  │ └── <CAD files, etc>
   └── wandb
     └── <latest run directory copied from wandb of your training job>
 ```
