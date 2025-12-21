@@ -63,3 +63,7 @@ NOTES
 
 The latest-run is the soft link, please make sure to copy the real target directory it linked with all sub dirs and files.
 Only provide (upload) the wandb of your last success pre-trained model for the Mission.
+
+## Submission form
+
+The submission form will be available here closer to the submission deadline.
