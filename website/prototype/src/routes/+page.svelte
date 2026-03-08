@@ -1,9 +1,8 @@
 <script lang="ts">
   import Scroll from '$lib/components/Scroll.svelte';
+  import Tape from '$lib/components/Tape.svelte';
   import prototype_logo from '$lib/assets/prototype_logo.webp'
 </script>
-
-
 
 <main>
   <Scroll>
@@ -26,9 +25,15 @@
   <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold.</p>
   <p>-Think it's in there? -All right. Let's get it! -Whoa. Hold on. Do you know what that thing can do to you? -Yeah, it'll grind your bones for its bread. -Yes, well, actually, that would be a giant. Now, ogres—they're much worse. They'll make a suit from your freshly peeled skin. -No! -They'll shave your liver. Squeeze the jelly from your eyes! Actually, it's quite good on toast.</p>
   <p>-Back! Back, beast! Back! I warn ya! -Right. This is the part where you run away. And stay out! "Wanted. Fairy tale creatures." All right. This one's full. -Take it away!</p>
+  <Tape></Tape>
 </main>
 
 <style>
+  :root {
+    --scroll-color: #002952;
+    --grid-color: #ffffff80;
+  }
+  
   @font-face {
     font-family: 'R&C Basic Full Bold';
     src: url('/fonts/r-c-basic-full.ttf');

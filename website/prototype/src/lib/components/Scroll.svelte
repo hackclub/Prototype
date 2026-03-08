@@ -39,7 +39,7 @@
 </script>
 
 <div class="scroll-underside" style:opacity={Math.max(1-progress*2, 0)}>
-  <p>scroll to unroll...</p>
+  <span>scroll to unroll...</span>
 </div>
 <div class="scroll-tracker" bind:this={container} style:height={`${trackHeight}px`}>
   <div class="scroll-viewport">
@@ -55,18 +55,9 @@
 
 
 <style>
-  :root {
-    --scroll-color: #002952;
-    --grid-color: #ffffff80;
-  }
-
-  @font-face {
-    font-family: 'R&C Basic Full Bold';
-    src: url('/fonts/r-c-basic-full.ttf');
-  }
-
-  p {
-    font-family: 'R&C Basic Full Bold', sans-serif;
+  @keyframes float {
+    0%, 100% {transform: translate(-50%, calc(-50% + 0.75rem));}
+    50% {transform:translate(-50%, calc(-50% - 0.75rem));}
   }
 
   .scroll-underside {
@@ -75,6 +66,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    animation: float 5s ease-in-out infinite;
+    font-family: 'R&C Basic Full Bold', sans-serif;
   }
 
   .scroll-tracker {
