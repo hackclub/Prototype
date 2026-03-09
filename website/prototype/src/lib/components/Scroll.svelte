@@ -39,7 +39,9 @@
 </script>
 
 <div class="scroll-underside" style:opacity={Math.max(1-progress*2, 0)}>
-  <span>scroll to unroll...</span>
+  <p>In MONTH, we brought together NUMBER of teens to THING. This is filler text.</p>
+  <p>Suspenseful filler text here. Preview. The result?</p>
+  <p style:opacity=0.6>↓ scroll to unroll... ↓</p>
 </div>
 <div class="scroll-tracker" bind:this={container} style:height={`${trackHeight}px`}>
   <div class="scroll-viewport">

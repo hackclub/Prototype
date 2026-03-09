@@ -9,9 +9,9 @@
     <div slot="content">
       <div class="hero-wrapper">
         <img src={prototype_logo} alt="prototype logo" class="hero-logo"/>
+        <h2 class="hero-tagline">This is a short tagline representing the event.</h2>
         <h2>December 19-21, 2025</h2>
         <h2>@ San Jose</h2>
-        <h2>tagline/description goes here</h2>
       </div>
     </div>
   </Scroll>
@@ -26,6 +26,9 @@
   <p>-Think it's in there? -All right. Let's get it! -Whoa. Hold on. Do you know what that thing can do to you? -Yeah, it'll grind your bones for its bread. -Yes, well, actually, that would be a giant. Now, ogres—they're much worse. They'll make a suit from your freshly peeled skin. -No! -They'll shave your liver. Squeeze the jelly from your eyes! Actually, it's quite good on toast.</p>
   <p>-Back! Back, beast! Back! I warn ya! -Right. This is the part where you run away. And stay out! "Wanted. Fairy tale creatures." All right. This one's full. -Take it away!</p>
   <Tape></Tape>
+  <footer>
+    <h2>Made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h2>
+  </footer>
 </main>
 
 <style>
@@ -34,15 +37,14 @@
     --grid-color: #ffffff80;
   }
   
+  :global(body) {
+    margin: 0;
+    padding: 0;
+  }
+
   @font-face {
     font-family: 'R&C Basic Full Bold';
     src: url('/fonts/r-c-basic-full.ttf');
-  }
-
-  .hero-wrapper h2 {
-    font-family: 'R&C Basic Full Bold', sans-serif;
-    line-height: 1;
-    margin: 0;
   }
 
   .hero-wrapper {
@@ -57,4 +59,35 @@
   .hero-logo {
     max-width: 80% !important;
   }
+
+  .hero-wrapper .hero-tagline {
+    font-size: 2rem;
+    line-height: 3rem;
+    opacity: 1.0;
+  }
+
+  .hero-wrapper h2 {
+    font-family: 'R&C Basic Full Bold', sans-serif;
+    font-size: 1.67rem;
+    line-height: 0.9;
+    margin: 0;
+    transform: translateY(-2rem);
+    opacity: 0.9;
+  }
+
+  footer {
+    min-height: 6.7rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'R&C Basic Full Bold', sans-serif;
+    background-color: var(--scroll-color);
+    color: white;
+  }
+
+  footer h2 a {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    color: white;
+  }
+
 </style>
