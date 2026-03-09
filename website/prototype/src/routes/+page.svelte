@@ -1,7 +1,6 @@
 <script lang="ts">
   import Scroll from '$lib/components/Scroll.svelte';
-  import ProjectCard from '$lib/components/gallery/ProjectCard.svelte';
-  import { projects } from '$lib/components/gallery/data';
+  import CardRow from '$lib/components/gallery/CardRow.svelte';
   import Tape from '$lib/components/Tape.svelte';
   import prototype_logo from '$lib/assets/prototype_logo.webp'
 </script>
@@ -27,9 +26,9 @@
   <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold.</p>
   <p>-Think it's in there? -All right. Let's get it! -Whoa. Hold on. Do you know what that thing can do to you? -Yeah, it'll grind your bones for its bread. -Yes, well, actually, that would be a giant. Now, ogres—they're much worse. They'll make a suit from your freshly peeled skin. -No! -They'll shave your liver. Squeeze the jelly from your eyes! Actually, it's quite good on toast.</p>
   <p>-Back! Back, beast! Back! I warn ya! -Right. This is the part where you run away. And stay out! "Wanted. Fairy tale creatures." All right. This one's full. -Take it away!</p>
-  <Tape></Tape>
-  <ProjectCard project={projects[0]}></ProjectCard>
-  <ProjectCard project={projects[1]}></ProjectCard>
+  <Tape/>
+  <CardRow direction='left'/>
+  <CardRow direction='right'/>
   <footer>
     <h2>Made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h2>
   </footer>
@@ -40,15 +39,15 @@
     --scroll-color: #002952;
     --grid-color: #ffffff80;
   }
-  
-  :global(body) {
-    margin: 0;
-    padding: 0;
-  }
 
   @font-face {
     font-family: 'R&C Basic Full Bold';
     src: url('/fonts/r-c-basic-full.ttf');
+  }
+
+  :global(body) {
+    margin: 0;
+    padding: 0;
   }
 
   :global(h2, h3) {
@@ -76,11 +75,11 @@
 
   .hero-wrapper h2 {
     font-size: 1.67rem;
-    line-height: 0.9;
+    line-height: 0.7;
     margin: 0;
-    transform: translateY(-1.5rem);
+    /* transform: translateY(-1.5rem); */
     opacity: 0.9;
-    max-width: 80% !important;
+    max-width: 85% !important;
     text-align: center;
   }
 
@@ -90,6 +89,7 @@
     justify-content: center;
     background-color: var(--scroll-color);
     color: white;
+    margin-top: 1rem;
   }
 
   footer h2 a {
