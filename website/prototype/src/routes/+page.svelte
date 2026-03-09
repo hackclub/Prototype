@@ -1,5 +1,7 @@
 <script lang="ts">
   import Scroll from '$lib/components/Scroll.svelte';
+  import ProjectCard from '$lib/components/gallery/ProjectCard.svelte';
+  import { projects } from '$lib/components/gallery/data';
   import Tape from '$lib/components/Tape.svelte';
   import prototype_logo from '$lib/assets/prototype_logo.webp'
 </script>
@@ -26,6 +28,8 @@
   <p>-Think it's in there? -All right. Let's get it! -Whoa. Hold on. Do you know what that thing can do to you? -Yeah, it'll grind your bones for its bread. -Yes, well, actually, that would be a giant. Now, ogres—they're much worse. They'll make a suit from your freshly peeled skin. -No! -They'll shave your liver. Squeeze the jelly from your eyes! Actually, it's quite good on toast.</p>
   <p>-Back! Back, beast! Back! I warn ya! -Right. This is the part where you run away. And stay out! "Wanted. Fairy tale creatures." All right. This one's full. -Take it away!</p>
   <Tape></Tape>
+  <ProjectCard project={projects[0]}></ProjectCard>
+  <ProjectCard project={projects[1]}></ProjectCard>
   <footer>
     <h2>Made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h2>
   </footer>
@@ -47,6 +51,10 @@
     src: url('/fonts/r-c-basic-full.ttf');
   }
 
+  :global(h2, h3) {
+    font-family: 'R&C Basic Full Bold', sans-serif;
+  }
+
   .hero-wrapper {
     height: 100vh;
     display: flex;
@@ -62,24 +70,24 @@
 
   .hero-wrapper .hero-tagline {
     font-size: 2rem;
-    line-height: 3rem;
+    margin-bottom: 0.5rem;
     opacity: 1.0;
   }
 
   .hero-wrapper h2 {
-    font-family: 'R&C Basic Full Bold', sans-serif;
     font-size: 1.67rem;
     line-height: 0.9;
     margin: 0;
-    transform: translateY(-2rem);
+    transform: translateY(-1.5rem);
     opacity: 0.9;
+    max-width: 80% !important;
+    text-align: center;
   }
 
   footer {
     min-height: 6.7rem;
     display: flex;
     justify-content: center;
-    font-family: 'R&C Basic Full Bold', sans-serif;
     background-color: var(--scroll-color);
     color: white;
   }
