@@ -2,6 +2,7 @@
   import Scroll from '$lib/components/Scroll.svelte';
   import CardRow from '$lib/components/gallery/CardRow.svelte';
   import Tape from '$lib/components/Tape.svelte';
+  import PopImg from '$lib/components/PopImg.svelte';
   import prototype_logo from '$lib/assets/prototype_logo.webp'
 </script>
 
@@ -16,16 +17,44 @@
       </div>
     </div>
   </Scroll>
-  <p>Once upon a time there was a lovely princess.</p>
-  <p>But she had an enchantment upon her of a fearful sort which could only be broken by love's first kiss. She was locked away in a castle guarded by a terrible fire-breathing dragon. Many brave knights had attempted to free her from this dreadful prison, but none prevailed. She waited in the dragon's keep in the highest room of the tallest tower for her true love and true love's first kiss.</p>
-  <p>Like that's ever gonna happen. What a load of—</p>
-  <p>Somebody once told me the world is gonna roll me, I ain't the sharpest tool in the shed. She was lookin' kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. The years start comin' and they don't stop comin'. Fed to the rules and I hit the ground runnin'. Didn't make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see, so what's wrong with takin' the backstreets? You'll never know if you don't go. You'll never shine if you don't glow.</p>
-  <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold.</p>
-  <p>It's a cool place and they say it gets colder. You're bundled up now, but wait till you get older. But the meteor men beg to differ, judging by the hole in the satellite picture. The ice we skate is gettin' pretty thin. The water's getting warm so you might as well swim. My world's on fire, how 'bout yours? That's the way I like it and I'll never get bored.</p>
-  <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold. Go! Go! Go. Go. Go.</p>
-  <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold.</p>
-  <p>-Think it's in there? -All right. Let's get it! -Whoa. Hold on. Do you know what that thing can do to you? -Yeah, it'll grind your bones for its bread. -Yes, well, actually, that would be a giant. Now, ogres—they're much worse. They'll make a suit from your freshly peeled skin. -No! -They'll shave your liver. Squeeze the jelly from your eyes! Actually, it's quite good on toast.</p>
-  <p>-Back! Back, beast! Back! I warn ya! -Right. This is the part where you run away. And stay out! "Wanted. Fairy tale creatures." All right. This one's full. -Take it away!</p>
+  <div class="info-section">
+    <div class="info-item">
+      <div class="info-text">
+        <p>Once upon a time there was a lovely princess.</p>
+        <p>But she had an enchantment upon her of a fearful sort which could only be broken by love's first kiss. She was locked away in a castle guarded by a terrible fire-breathing dragon. Many brave knights had attempted to free her from this dreadful prison, but none prevailed. She waited in the dragon's keep in the highest room of the tallest tower for her true love and true love's first kiss.</p>
+        <p>Like that's ever gonna happen. What a load of—</p>
+        <p>Somebody once told me the world is gonna roll me, I ain't the sharpest tool in the shed. She was lookin' kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. The years start comin' and they don't stop comin'. Fed to the rules and I hit the ground runnin'. Didn't make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see, so what's wrong with takin' the backstreets? You'll never know if you don't go. You'll never shine if you don't glow.</p>
+        <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold.</p>
+        <p>It's a cool place and they say it gets colder. You're bundled up now, but wait till you get older. But the meteor men beg to differ, judging by the hole in the satellite picture. The ice we skate is gettin' pretty thin. The water's getting warm so you might as well swim. My world's on fire, how 'bout yours? That's the way I like it and I'll never get bored.</p>
+        <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold. Go! Go! Go. Go. Go.</p>      
+      </div>
+      <PopImg images={[
+        {src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cat%27s_silly_face.jpg/500px-Cat%27s_silly_face.jpg", alt: "alt text"},
+        {src: "https://upload.wikimedia.org/wikipedia/commons/2/27/Planko_Looking_Goofy.png", alt: "alt text"},
+        {src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/CatSkiing.jpg", alt: "alt text"}
+      ]}/>    
+    </div>
+    <div class="info-item">
+      <PopImg images={[
+        {src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cat%27s_silly_face.jpg/500px-Cat%27s_silly_face.jpg", alt: "alt text"},
+        {src: "https://upload.wikimedia.org/wikipedia/commons/2/27/Planko_Looking_Goofy.png", alt: "alt text"},
+        {src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/CatSkiing.jpg", alt: "alt text"}
+      ]}/>
+      <div class="info-text">
+        	<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don&#39;t care what humans think is impossible.</p>
+          <p>Yellow, black. Yellow, black.<br />
+          Yellow, black. Yellow, black.</p>
+          <p>Ooh, black and yellow!
+          Let&#39;s shake it up a little.</p>
+          <p>Barry! Breakfast is ready!</p>
+          <p>Ooming!</p>
+          <p>Hang on a second.</p>
+          <p>Hello?</p>
+          <p>- Barry?
+          <br />- Adam?</p>
+      </div>
+    </div>
+  </div>
   <Tape/>
   <CardRow direction='left'/>
   <CardRow direction='right'/>
@@ -38,6 +67,7 @@
   :root {
     --scroll-color: #002952;
     --grid-color: #ffffff80;
+    background: white;
   }
 
   @font-face {
@@ -77,10 +107,23 @@
     font-size: 1.67rem;
     line-height: 0.7;
     margin: 0;
-    /* transform: translateY(-1.5rem); */
     opacity: 0.9;
     max-width: 85% !important;
     text-align: center;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5vw;
+    gap: 2rem;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   footer {
