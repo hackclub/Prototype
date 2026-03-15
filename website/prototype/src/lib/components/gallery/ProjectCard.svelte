@@ -16,7 +16,7 @@
   </div>
   <div class="card-body">
     <h3 class="card-title">{project.name}</h3>
-    <p class="card-members">{project.members.join(', ')}</p>
+    <p class="card-members"><i>{project.members.join(', ')}</i></p>
     <p class="card-description">{project.description.slice(0, 110).trimEnd() + "..."}</p>
   </div>
   <div class="card-corner">↗</div> <!-- cosmetic -->

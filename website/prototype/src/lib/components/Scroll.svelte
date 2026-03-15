@@ -69,7 +69,10 @@
     transform: translate(-50%, -50%);
     text-align: center;
     animation: float 5s ease-in-out infinite;
-    font-family: 'R&C Basic Full Bold', sans-serif;
+  }
+
+  p {
+    font-family: 'R&C Basic Full Bold', sans-serif !important;
   }
 
   .scroll-tracker {

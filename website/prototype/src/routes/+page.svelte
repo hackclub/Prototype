@@ -75,13 +75,24 @@
     src: url('/fonts/r-c-basic-full.ttf');
   }
 
+
+  @font-face {
+    font-family: 'Phantom Sans Regular';
+    src: url('/fonts/PhantomSans-Regular.ttf');
+  }
+
   :global(body) {
     margin: 0;
     padding: 0;
   }
 
   :global(h2, h3) {
-    font-family: 'R&C Basic Full Bold', sans-serif;
+    font-family: 'R&C Basic Full Bold', sans-serif; 
+  }
+
+  :global(p) {
+    font-family: 'Phantom Sans Regular', sans-serif;
+    font-size: 1.15rem;
   }
 
   .hero-wrapper {
