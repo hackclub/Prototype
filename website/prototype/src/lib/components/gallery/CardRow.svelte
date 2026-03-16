@@ -20,7 +20,10 @@
   >
     {#each [0, 1] as setIndex} 
       <div class='set' aria-hidden={setIndex === 1 ? 'true' : undefined}> <!-- set aria-hidden on clones to true so screen readers don't infinitely reread -->
-        {#each projects as project}
+        {#each projects.slice(
+          direction === 'right' ? 0 : Math.ceil(projects.length/2),
+          direction === 'right' ? Math.ceil(projects.length/2) : projects.length
+        ) as project}
           <ProjectCard {project} {onOpen} />
         {/each}
       </div>

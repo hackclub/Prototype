@@ -19,7 +19,7 @@
     <p class="card-members"><i>{project.members.join(', ')}</i></p>
     <p class="card-description">{project.description.slice(0, 110).trimEnd() + "..."}</p>
   </div>
-  <div class="card-corner">↗</div> <!-- cosmetic -->
+  <div class="card-corner" title="Github">↗</div> <!-- cosmetic -->
 </button>
 
 <style>
@@ -79,7 +79,7 @@
     justify-content: center;
     font-size: 1.75rem;
     color: var(--scroll-color);
-    background: white;
+    background: color-mix(in srgb, var(--scroll-color) 40%, white);
     border: 3px solid var(--scroll-color);
     box-shadow: 3px 3px var(--scroll-color);
   }
@@ -90,9 +90,22 @@
 
   .card-corner {
     position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem; 
-    font-size: 1.5rem;
-    color: color-mix(in srgb, var(--scroll-color) 50%, white 50%);
+    bottom: 0;
+    right: 0; 
+
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    background: var(--scroll-color);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    
+    font-size: 1.3rem;
+    text-align: right;
+    color: color-mix(in srgb, var(--scroll-color) 40%, white);
+    transition: color 0.1s ease;
+  }
+
+  .card-corner:hover {
+    color: white;
   }
 </style>

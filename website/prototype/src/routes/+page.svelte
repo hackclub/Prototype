@@ -59,12 +59,12 @@
       </div>
     </div>
   </div>
-  <Tape/>
   <CardRow onOpen={(project) => selectedProject = project} direction='left'/>
   <CardRow onOpen={(project) => selectedProject = project} direction='right'/>
   {#if selectedProject}
     <ProjectModal project={selectedProject} onClose={() => selectedProject = null}/>
   {/if}
+  <Tape/>
   <footer>
     <h2>Made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h2>
   </footer>
@@ -75,6 +75,7 @@
     --scroll-color: #002952;
     --grid-color: #ffffff80;
     background: white;
+    color: var(--scroll-color);
   }
 
   @font-face {
