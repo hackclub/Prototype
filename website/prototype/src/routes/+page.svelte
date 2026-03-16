@@ -23,8 +23,8 @@
   <div class="info-section">
     <div class="info-item">
       <div class="info-text">
-        <p>Prototype was a 4-day hardware hackathon for teenagers makers held December 19 - 21, 2025 in San Jose. Hosted by <a href="https://hackclub.com">Hack Club</a> and <a href="https://amd.com">AMD</a>, young builders from across the United States spend a weekend turning ambitious ideas into AI-powered hardware projects.</p>
-        <p>In order to qualify for Prototype, teens first had to build and ship a project through <a href="https://blueprint.hackclub.com">Blueprint</a>. With AI PCs powered by <b>Ryzen AI processors</b>, <b>Hugging Face Le Robot arms</b>, and over <b>1,000 pounds of hardware</b>, participants spent three days building AI tools capable of playing poker, operating medical procedures, and bartending drinks.</p>
+        <p>Prototype was a 4-day hardware hackathon for teenage makers held December 19–21, 2025 in San Jose. Hosted by <a href="https://hackclub.com">Hack Club</a> and <a href="https://amd.com">AMD</a>, young builders from across the United States spent a weekend turning ambitious ideas into AI-powered hardware projects.</p>
+        <p>In order to qualify for Prototype, teens first had to build and ship a project through <a href="https://blueprint.hackclub.com">Blueprint</a>. With AI PCs powered by <b>AMD Ryzen AI processors</b>, <b>Hugging Face Le Robot arms</b>, and over <b>1,000 pounds of hardware</b>, participants spent three days building AI tools capable of playing poker, operating medical procedures, and bartending drinks.</p>
         <p>Hackers took home incredible prizes, including AI PCs powered by AMD Ryzen AI Processors, Hugging Face Le Robot arms, 3D printers, and scholarships. The completed projects and their student descriptions are listed below.</p>
       </div>
       <PopImg images={[
@@ -51,10 +51,12 @@
         {src: "https://m.media-amazon.com/images/I/61rE1xp-8jL._AC_UF894,1000_QL80_.jpg", alt: "seal plush easter egg"}
       ]}/>
       <div class="info-text">
-        	<p>Prototype is a part of AMD's commitment to the <a href="https://www.whitehouse.gov/edai/">AI Education Pledge to America's Youth</a>, helping empower the next generation of builders to learn and create with AI.</p>
+        	<p>Prototype is a part of AMD's commitment to the <a href="https://www.whitehouse.gov/edai/">AI Education Pledge to America's Youth</a>, empowering the next generation of builders to learn and create with AI.</p>
           <p>The winners of Prototype were given the opportunity to be recognized as part of AMD’s <b>CES 2026 keynote livestream</b>. Check it out!</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/28cWcxYd6Tk?si=y_czZa5z0EcU9NUr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+          <div class="info-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/28cWcxYd6Tk?si=y_czZa5z0EcU9NUr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
     </div>
   </div>
   <CardRow onOpen={(project) => selectedProject = project} direction="left"/>
@@ -148,6 +150,16 @@
     gap: 2rem;
   }
 
+  .info-video {
+    background-color: color-mix(in srgb, var(--scroll-color) 85%, white);
+    background-image:
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 1.67rem 1.67rem; 
+    padding: 1rem;
+    border-radius: 1rem / 0.5rem;
+    width: fit-content;
+  }
   iframe {
     width: 100%;
     height: auto;
@@ -169,6 +181,10 @@
   footer h3 {
     text-decoration: none;
     margin: 0.5rem;
+  }
+
+  footer h3 a {
+    text-decoration: none;
   }
 
   footer p {

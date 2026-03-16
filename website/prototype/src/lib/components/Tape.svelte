@@ -3,22 +3,16 @@
 <div class="tape-wrapper">
   <div class="tape" style="transform: rotate(-6.7deg)">
     <div class="text-wrapper">
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
     </div>
   </div>
   <div class="tape" style="transform: rotate(6.7deg)">
     <div class="text-wrapper">
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
   </div>
 </div>
 </div>
@@ -42,13 +36,12 @@
   }
   
   @keyframes scroll-text {
-    from {transform:translateX(8.33333%);}
-    to {transform:translateX(-8.33333%);} 
+    from {transform:translateX(16.67%);}
+    to {transform:translateX(-16.67%);} 
   }
 
   .tape {
     position: absolute;
-    /* figure out good looking box shadow */
     background: var(--scroll-color);
     width: 110%;
     white-space: nowrap;

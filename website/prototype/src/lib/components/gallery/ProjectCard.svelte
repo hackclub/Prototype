@@ -15,7 +15,7 @@
         <div class="play-badge">▶</div>
       </div>
     {:else}
-      <img src={project.media.src} alt={project.name} loading="lazy">
+      <img src={project.media.src} alt={project.name} loading="lazy"/>
     {/if}
   </div>
   <div class="card-body">
@@ -34,6 +34,7 @@
   button {
     appearance: none;
     padding: 0;
+    margin-bottom: 6px;
   }
 
   .card {
@@ -92,7 +93,6 @@
       linear-gradient(var(--grid-color) 1px, transparent 1px),
       linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 1.5rem 1.5rem; 
-
   }
 
   .play-badge {
