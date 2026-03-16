@@ -3,22 +3,22 @@
 <div class="tape-wrapper">
   <div class="tape" style="transform: rotate(-6.7deg)">
     <div class="text-wrapper">
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
     </div>
   </div>
   <div class="tape" style="transform: rotate(6.7deg)">
     <div class="text-wrapper">
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
-      <span>DATE | TIME | INFORMATION GOES HERE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
   </div>
 </div>
 </div>

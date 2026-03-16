@@ -39,8 +39,9 @@
 </script>
 
 <div class="scroll-underside" style:opacity={Math.max(1-progress*2, 0)}>
-  <p>In MONTH, we brought together NUMBER of teens to THING. This is filler text.</p>
-  <p>Suspenseful filler text here. Preview. The result?</p>
+  <p>In December 2025, we flew 68 teenage builders to San Jose. They received AI PCs, robot arms, and over 1,000+ pounds of hardware.</p>
+  <p>Then we gave them 72 hours.</p>
+  <p>The result?</p>
   <p style:opacity=0.6>↓ scroll to unroll... ↓</p>
 </div>
 <div class="scroll-tracker" bind:this={container} style:height={`${trackHeight}px`}>

@@ -8,9 +8,9 @@
   <h2>
     {#if direction === 'right'}
       <div class="row-divider"></div>
-      <span>text here</span>
+      <span>Projects 12-22</span>
     {:else}
-      <span>text here</span>
+      <span>Projects 1-11</span>
       <div class="row-divider"></div>
     {/if}
   </h2>

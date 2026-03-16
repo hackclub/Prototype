@@ -23,13 +23,9 @@
   <div class="info-section">
     <div class="info-item">
       <div class="info-text">
-        <p>Once upon a time there was a lovely princess.</p>
-        <p>But she had an enchantment upon her of a fearful sort which could only be broken by love's first kiss. She was locked away in a castle guarded by a terrible fire-breathing dragon. Many brave knights had attempted to free her from this dreadful prison, but none prevailed. She waited in the dragon's keep in the highest room of the tallest tower for her true love and true love's first kiss.</p>
-        <p>Like that's ever gonna happen. What a load of—</p>
-        <p>Somebody once told me the world is gonna roll me, I ain't the sharpest tool in the shed. She was lookin' kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. The years start comin' and they don't stop comin'. Fed to the rules and I hit the ground runnin'. Didn't make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see, so what's wrong with takin' the backstreets? You'll never know if you don't go. You'll never shine if you don't glow.</p>
-        <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold.</p>
-        <p>It's a cool place and they say it gets colder. You're bundled up now, but wait till you get older. But the meteor men beg to differ, judging by the hole in the satellite picture. The ice we skate is gettin' pretty thin. The water's getting warm so you might as well swim. My world's on fire, how 'bout yours? That's the way I like it and I'll never get bored.</p>
-        <p>Hey, now, you're an all-star, get your game on, go play. Hey, now, you're a rock star, get the show on, get paid. And all that glitters is gold; only shootin' stars break the mold. Go! Go! Go. Go. Go.</p>      
+        <p>Prototype was a 4-day hardware hackathon for teenagers makers held December 19 - 21, 2025 in San Jose. Hosted by <a href="https://hackclub.com">Hack Club</a> and <a href="https://amd.com">AMD</a>, young builders from across the United States spend a weekend turning ambitious ideas into AI-powered hardware projects.</p>
+        <p>In order to qualify for Prototype, teens first had to build and ship a project through <a href="https://blueprint.hackclub.com">Blueprint</a>. With AI PCs powered by AMD <b>Ryzen AI processors</b>, <b>Hugging Face Le Robot arms</b>, and over <b>1,000 pounds of hardware</b>, participants spent three days building AI tools capable of playing poker, operating medical procedures, and bartending drinks.</p>
+        <p>Hackers took home incredible prizes, including AI PCs powered by AMD Ryzen AI Processors, Hugging Face Le Robot arms, 3D printers, and scholarships. You can view some of the completed projects below.</p>
       </div>
       <PopImg images={[
         {src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cat%27s_silly_face.jpg/500px-Cat%27s_silly_face.jpg", alt: "alt text"},
@@ -45,28 +41,21 @@
         {src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cat%27s_silly_face.jpg/500px-Cat%27s_silly_face.jpg", alt: "alt text"}
       ]}/>
       <div class="info-text">
-        	<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don&#39;t care what humans think is impossible.</p>
-          <p>Yellow, black. Yellow, black.<br />
-          Yellow, black. Yellow, black.</p>
-          <p>Ooh, black and yellow!
-          Let&#39;s shake it up a little.</p>
-          <p>Barry! Breakfast is ready!</p>
-          <p>Ooming!</p>
-          <p>Hang on a second.</p>
-          <p>Hello?</p>
-          <p>- Barry?
-          <br />- Adam?</p>
-      </div>
+        	<p>Prototype is a part of AMD's commitment to the <a href="https://www.whitehouse.gov/edai/">AI Education Pledge to America's Youth</a>, helping empower the next generation of builders to learn and create with AI.</p>
+          <p>You can view Prototype winners being recognized as part of AMD’s CES 2026 keynote livestream below:</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/28cWcxYd6Tk?si=y_czZa5z0EcU9NUr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
   </div>
-  <CardRow onOpen={(project) => selectedProject = project} direction='left'/>
-  <CardRow onOpen={(project) => selectedProject = project} direction='right'/>
+  <CardRow onOpen={(project) => selectedProject = project} direction="left"/>
+  <CardRow onOpen={(project) => selectedProject = project} direction="right"/>
   {#if selectedProject}
     <ProjectModal project={selectedProject} onClose={() => selectedProject = null}/>
   {/if}
   <Tape/>
   <footer>
-    <h2>Made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h2>
+    <h3>Site made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h3>
+    <p><a href="https://hackclub.com">Hack Club</a> | <a href="https://amd.com">AMD</a></p>
   </footer>
 </main>
 
@@ -138,6 +127,10 @@
     gap: 2rem;
   }
 
+  .info-text {
+    font-size: 1.25rem;
+  }
+
   .info-item {
     display: flex;
     flex-direction: row;
@@ -145,19 +138,38 @@
     gap: 2rem;
   }
 
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    max-width: 560px;
+  }
+
   footer {
     min-height: 6.7rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--scroll-color);
     color: white;
-    margin-top: 1rem;
+    line-height: 1rem;
+    padding: 1rem;
   }
 
-  footer h2 a {
+  footer h3 {
+    text-decoration: none;
+    margin: 0.5rem;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  a {
     text-decoration-line: underline;
+    text-decoration-thickness: 2px;
     text-decoration-style: wavy;
-    color: white;
+    color: inherit;
   }
 
 </style>
