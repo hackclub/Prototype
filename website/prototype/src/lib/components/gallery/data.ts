@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "The robot combines human-like physical motion with AI-driven decision-making. Left in charge of managing a fast-paced matching-based card game, the system uses OpenCV for neural network-based card classification to identify, track, and evaluate cards as they are played, running a strategy analysis after every move. The system is fully modular, allowing vision models, strategies, and motion constraints to be updated independently. With motion constraints derived from human movement benchmarks and a state-driven decision framework, the robot reacts dynamically to human players and changing game conditions. This project highlights AMD hardware’s strength for real-time workloads that demand reliability and scalable performance.",
     github: "https://github.com/Mateo-Johnson/prototype2025",
     media: {
-      type: "video",
+      type: "iframe",
       src: "https://www.youtube.com/embed/GOwJP6qtDTw?si=If3Ei5OxtNZ7Yecn",
     },
   },
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     github: 'https://github.com/achen18/AMD_Robotics_Hackathon_2025_HackAMole',
     media: {
       type: 'image',
-      src: 'https://private-user-images.githubusercontent.com/78692747/529009389-594fcdc0-f376-4272-8018-6e98dc20b605.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzM2ODczMDcsIm5iZiI6MTc3MzY4NzAwNywicGF0aCI6Ii83ODY5Mjc0Ny81MjkwMDkzODktNTk0ZmNkYzAtZjM3Ni00MjcyLTgwMTgtNmU5OGRjMjBiNjA1LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzE2VDE4NTAwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZkZDQ3YTQ3ZTM1NzY4ODM1Yjk1MTBmZTI3ZjUxNjlmMDg2YzM3NTNhODE3Nzk5YzMzNmI5NjE3YjE5ZjQyMzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LKO7jc6tLMGgjdnPqQ06o2yPWrq1FP3li9ed_0DtUEk'
+      src: 'https://raw.githubusercontent.com/achen18/AMD_Robotics_Hackathon_2025_HackAMole/main/imgs/setup.jpg?raw=true'
     }
   },
   {
@@ -168,7 +168,7 @@ export const projects: Project[] = [
       "Armtender is a bartending project built using a LeRobot arm to deliver drinks in a fun way. It spins a fortune wheel with a button. Once the button is pressed, a green light lits up and it looks for the drink the fortune wheel landed on. Based on the arrow location, it decides for what drink to pick up. Then it goes to the drink, picks it up and delivers the drink can through the pick-up window.",
     github: "https://github.com/afia-ava/Armtender",
     media: {
-      type: "video",
+      type: "iframe",
       src: "https://www.youtube.com/embed/xtB8Iqg5vC8?si=Fw-95LTdT9pS5s4U",
     },
   },
@@ -214,7 +214,7 @@ export const projects: Project[] = [
       "Smorebot is a project which uses a Hugging Face Le Robot arm with AI and other Hardware to make the perfect Smores!",
     github: "https://github.com/kaylz-d/smorebot",
     media: {
-      type: "video",
+      type: "iframe",
       src: "https://youtube.com/embed/Y920YvBZafg",
     },
   },
