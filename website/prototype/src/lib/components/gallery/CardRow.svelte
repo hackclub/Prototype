@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { projects } from '$lib/components/gallery/data';
+  import { projects, type Project } from '$lib/components/gallery/data';
   import ProjectCard from './ProjectCard.svelte';
-  export let direction: 'left' | 'right' = 'left';
+  let { onOpen, direction = 'left' } = $props<{onOpen: (project: Project) => void; direction?: 'left' | 'right'}>(); 
 </script>
 
 <div class='row-wrapper'>
@@ -20,8 +20,8 @@
   >
     {#each [0, 1] as setIndex} 
       <div class='set' aria-hidden={setIndex === 1 ? 'true' : undefined}> <!-- set aria-hidden on clones to true so screen readers don't infinitely reread -->
-        {#each projects as project, i}
-          <ProjectCard {project} />
+        {#each projects as project}
+          <ProjectCard {project} {onOpen} />
         {/each}
       </div>
     {/each}

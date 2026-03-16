@@ -4,6 +4,9 @@
   import Tape from '$lib/components/Tape.svelte';
   import PopImg from '$lib/components/PopImg.svelte';
   import prototype_logo from '$lib/assets/prototype_logo.webp'
+  import ProjectModal from '$lib/components/gallery/ProjectModal.svelte';
+  import type { Project } from '$lib/components/gallery/data';
+  let selectedProject: Project | null = null;
 </script>
 
 <main>
@@ -36,9 +39,10 @@
     </div>
     <div class="info-item">
       <PopImg images={[
-        {src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cat%27s_silly_face.jpg/500px-Cat%27s_silly_face.jpg", alt: "alt text"},
         {src: "https://upload.wikimedia.org/wikipedia/commons/2/27/Planko_Looking_Goofy.png", alt: "alt text"},
-        {src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/CatSkiing.jpg", alt: "alt text"}
+        {src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/CatSkiing.jpg", alt: "alt text"}, 
+        {src: "https://m.media-amazon.com/images/I/61rE1xp-8jL._AC_UF894,1000_QL80_.jpg", alt: "seal plush easter egg"},
+        {src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cat%27s_silly_face.jpg/500px-Cat%27s_silly_face.jpg", alt: "alt text"}
       ]}/>
       <div class="info-text">
         	<p>According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don&#39;t care what humans think is impossible.</p>
@@ -56,8 +60,11 @@
     </div>
   </div>
   <Tape/>
-  <CardRow direction='left'/>
-  <CardRow direction='right'/>
+  <CardRow onOpen={(project) => selectedProject = project} direction='left'/>
+  <CardRow onOpen={(project) => selectedProject = project} direction='right'/>
+  {#if selectedProject}
+    <ProjectModal project={selectedProject} onClose={() => selectedProject = null}/>
+  {/if}
   <footer>
     <h2>Made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h2>
   </footer>

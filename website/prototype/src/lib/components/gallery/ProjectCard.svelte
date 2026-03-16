@@ -1,9 +1,9 @@
 <script lang="ts">
   import type {Project} from '$lib/components/gallery/data';
-  export let project: Project;
+  let { project, onOpen } = $props<{project: Project; onOpen: (project: Project) => void;}>(); 
 </script>
 
-<div class="card">
+<button class="card" onclick={() => onOpen(project)}>
   <div class="card-media">
     {#if project.media.type === 'video'}
       <video preload="metadata" muted playsinline style="pointer-events: none;">
@@ -20,9 +20,13 @@
     <p class="card-description">{project.description.slice(0, 110).trimEnd() + "..."}</p>
   </div>
   <div class="card-corner">↗</div> <!-- cosmetic -->
-</div>
+</button>
 
 <style>
+  h3, p {
+    margin: 0.25rem;
+  }
+
   .card {
     position: relative;
     flex: 0 0 20rem; /*make these numbers not arbitrary later*/
