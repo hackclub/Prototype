@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount, onDestroy, tick } from "svelte";
+    import { scale } from "svelte/transition";
     import { type Project } from "./data";
     
     export let onClose: () => void;
@@ -22,17 +23,19 @@
     function close() {
         if (closing) return;
         closing = true;
-        setTimeout(() => {
-            onClose?.();
-            // will have to put onClose={() => selectedProject = null}
-        }, 480)
+        if (dialogEl) {
+            dialogEl.style.transition = "transform 0.4s ease, opacity 0.3s ease";
+            dialogEl.style.transform = "scale(0.1)";
+            dialogEl.style.opacity = "0";
+        }
+        setTimeout(() => onClose?.(), 480);
     }
 </script>
 
 <svelte:window on:keydown={(e) => e.key === 'Escape' && close()}/>
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 <div class="overlay" class:closing class:visible bind:this={overlayEl} on:click={(e) => e.target === overlayEl && close()}>
-    <div class="dialog" class:closing class:visible bind:this={dialogEl} role="dialog" aria-modal="true">
+    <div class="dialog" class:closing class:visible bind:this={dialogEl} role="dialog" aria-modal="true" in:scale={{ duration: 400, start: 0.1 }}>
         <button class="close-button" on:click={close} aria-label="close">X</button>
         <div class="dialog-media">
             {#if project.media.type === 'video'}
@@ -108,22 +111,21 @@
         background-color: var(--scroll-color);
         border: 3px solid var(--scroll-color);
         box-shadow: 3px 3px 0 var(--scroll-color);
-        opacity: 0;
-        transition: transform 0.4s ease, opacity 0.3s ease;
+        /* transition: transform 0.4s ease, opacity 0.3s ease; */
         transform-origin: center center;
         gap: 3px;
-        transform: scale(0.1);
-        opacity: 0;
+        /* transform: scale(0.1); */
+        /* opacity: 0; */
     }
 
     .dialog.visible {
-        transform: scale(1);
-        opacity: 1;
+        /* transform: scale(1); */
+        /* opacity: 1; */
     }
 
     .dialog.closing {
-        transform: scale(0.1);
-        opacity: 0;
+        /* transform: scale(0.1);
+        opacity: 0; */
     }
 
     .dialog-media, .dialog-info {
@@ -136,12 +138,22 @@
 
     .dialog-media {
         background-color: color-mix(in srgb, var(--scroll-color) 80%, white 20%);
+        flex: 1 1 50%;
+        min-width: 200px;
+        min-height: 200px;
+        aspect-ratio: 1;
     }
 
     .dialog-media img, .dialog-media video {
         max-width: 100%;
         max-height: 100%;
-        object-fit: hidden;
+        object-fit: cover;
+    }
+
+    .dialog-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .dialog-info {
