@@ -27,6 +27,11 @@
     margin: 0.25rem;
   }
 
+  button {
+    appearance: none;
+    padding: 0;
+  }
+
   .card {
     position: relative;
     flex: 0 0 20rem; /*make these numbers not arbitrary later*/
@@ -38,6 +43,8 @@
     cursor: pointer;
     outline: none;
     user-select: none;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;  
   }
 
@@ -49,10 +56,12 @@
   .card:active {
     transform: translate(2px, 2px);
     box-shadow: 3px 3px 0 var(--scroll-color);
+    margin: 0;
   }
 
   .card-media {
     position: relative;
+    margin: 0;
     width: 100%;
     height: 15rem;
     overflow: hidden;
@@ -60,6 +69,10 @@
   }
 
   .card video, .card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.25s ease;
   }
 
