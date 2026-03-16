@@ -20,7 +20,7 @@
 
     img {
         transition: transform 0.1s ease-out;
-        max-width: min(15rem, 30vw);
+        max-width: min(16.7rem, 30vw);
     }
 
     img:hover {
