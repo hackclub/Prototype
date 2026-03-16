@@ -98,7 +98,7 @@
   }
 
   :global(p) {
-    font-family: 'Phantom Sans Regular', sans-serif;
+    font-family: 'Phantom Sans Regular', 'DM Mono', monospace;
     font-size: 1.15rem;
   }
 
