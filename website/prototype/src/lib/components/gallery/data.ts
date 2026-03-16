@@ -1,5 +1,5 @@
 interface ProjectMedia {
-  type: 'image' | 'video';
+  type: 'image' | 'video' | 'iframe';
   src: string;
 }
 
@@ -69,6 +69,17 @@ export const projects: Project[] = [
     }
   },
   {
+    id: '8',
+    name: 'Noname Mixbot',
+    members: ['Eashaan', 'Luke', 'Dylan'],
+    description: 'Noname Mixbot is a robotic arm powered by Amd AI technology that can make a wide range of drinks automatically. It’s designed to mix drinks like a bartender, and for the demo, it will show how to make a Shirley Temple. The Mixbot can do many different recipes.',
+    github: 'https://github.com/Dragster2/Team-Noname---Mixbot',
+    media: {
+      type: 'iframe',
+      src: 'https://drive.google.com/file/d/14K_9mAVrzC7A8ykqhfu7oOF1n0hcibOQ/preview'
+    }
+  },
+  {
     id: '9',
     name: 'Dragon',
     members: ['Shreya', 'Nandini', 'Neya'],
@@ -80,14 +91,50 @@ export const projects: Project[] = [
     }
   },
   {
+    id: "10",
+    name: "SpoonBob",
+    members: ["Mateo", "Ethan P.", "Kaushik"],
+    description:
+      "The robot combines human-like physical motion with AI-driven decision-making. Left in charge of managing a fast-paced matching-based card game, the system uses OpenCV for neural network-based card classification to identify, track, and evaluate cards as they are played, running a strategy analysis after every move. The system is fully modular, allowing vision models, strategies, and motion constraints to be updated independently. With motion constraints derived from human movement benchmarks and a state-driven decision framework, the robot reacts dynamically to human players and changing game conditions. This project highlights AMD hardware’s strength for real-time workloads that demand reliability and scalable performance.",
+    github: "https://github.com/Mateo-Johnson/prototype2025",
+    media: {
+      type: "video",
+      src: "https://www.youtube.com/embed/GOwJP6qtDTw?si=If3Ei5OxtNZ7Yecn",
+    },
+  },
+  {
+    id: "11",
+    name: "ToolBox Assistant",
+    members: ["Stanley", "Muhammad", "Abdalla"],
+    description:
+      "ToolBox Assistant is like a 3rd hand. Press a button, speak into the mic, and the Robotic arm automatically picks that item up for you!",
+    github: "https://github.com/Stanlee1234/Prototype",
+    media: {
+      type: "iframe",
+      src: "https://drive.google.com/file/d/1k-R1A0AUDar18Tuh5NBbiJbwUSfaUxem/preview",
+    },
+  },
+  {
+    id: "12",
+    name: "Conveyor Circuits",
+    members: ["Frank", "Vedansh", "Mitul"],
+    description:
+      "We created magentic circuit boxes, which when connected, will complete their circuits. For ease of access, we use a conveyor belt to feed the hand different circuit boxes.",
+    github: "https://github.com/VedanshMannem/Prototype",
+    media: {
+      type: "iframe",
+      src: "https://drive.google.com/file/d/1uWtUH_619erYG60zRaHDtjjltLE4BeXs/preview",
+    },
+  },
+  {
     id: '13',
     name: 'HackAMole',
     members: ['Aaron', 'Yuanxi', 'Guy'],
     description: 'AI-powered SO-101 Robot Arm using CV to press buttons for a Whack-A-Mole type game. Trained using the online software Hugging Face and Weights & Biases. Constructed for Hack Club\'s Prototype hackathon Dec. 19-21.',
     github: 'https://github.com/achen18/AMD_Robotics_Hackathon_2025_HackAMole',
     media: {
-      type: 'video',
-      src: 'https://github.com/user-attachments/assets/08ff023d-3b57-453b-bb1e-c53b1088d2f3'
+      type: 'image',
+      src: 'https://private-user-images.githubusercontent.com/78692747/529009389-594fcdc0-f376-4272-8018-6e98dc20b605.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzM2ODczMDcsIm5iZiI6MTc3MzY4NzAwNywicGF0aCI6Ii83ODY5Mjc0Ny81MjkwMDkzODktNTk0ZmNkYzAtZjM3Ni00MjcyLTgwMTgtNmU5OGRjMjBiNjA1LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzE2VDE4NTAwN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZkZDQ3YTQ3ZTM1NzY4ODM1Yjk1MTBmZTI3ZjUxNjlmMDg2YzM3NTNhODE3Nzk5YzMzNmI5NjE3YjE5ZjQyMzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LKO7jc6tLMGgjdnPqQ06o2yPWrq1FP3li9ed_0DtUEk'
     }
   },
   {
@@ -100,6 +147,42 @@ export const projects: Project[] = [
       type: 'video',
       src: 'https://raw.githubusercontent.com/crnicholson/prototype-main/main/demo.mp4'
     }
+  },
+  {
+    id: "15",
+    name: "FiddleStein",
+    members: ["Udo", "Max G.", "Sidd"],
+    description:
+      "Automatic violin playing robot made for Hackclub Prototype 2025, using an SO101 robotic arm for bowing, MG996R servos for fingering, and 12 AAA batteries for power, and AMD-Powered AI. CircuitPython and TKinter provide a GUI that allows one of four preset songs to be chosen to be played on four servos.",
+    github: "https://github.com/newtontriumphant/Hackclub_Prototype_Fiddlestein",
+    media: {
+      type: "iframe",
+      src: "https://drive.google.com/file/d/1NFpx0KfdvVGra_fxgwtTVWHd7cBESF5j/preview",
+    },
+  },
+  {
+    id: "16",
+    name: "Armtender",
+    members: ["Emme", "Ruzanna", "Afia"],
+    description:
+      "Armtender is a bartending project built using a LeRobot arm to deliver drinks in a fun way. It spins a fortune wheel with a button. Once the button is pressed, a green light lits up and it looks for the drink the fortune wheel landed on. Based on the arrow location, it decides for what drink to pick up. Then it goes to the drink, picks it up and delivers the drink can through the pick-up window.",
+    github: "https://github.com/afia-ava/Armtender",
+    media: {
+      type: "video",
+      src: "https://www.youtube.com/embed/xtB8Iqg5vC8?si=Fw-95LTdT9pS5s4U",
+    },
+  },
+  {
+    id: "17a",
+    name: "PokerRobot",
+    members: ["Prasham", "Eshaan", "Nachu"],
+    description:
+      "Our group created a poker playing robot arm. This robot uses several cameras and a trained yoloV5 model to identify and determine the robot's hand per match. Then the robot decides to either check, raise, or match the oppenent based on its odds and the river (poker cards on the table). Using the SO-Arm101, the robot is able to draw its own cards and place chips during each of its matches. Using a waveshare Bus Servo Adapter and 6 FeeTech STS3215 servos the robot is able to move across the playing fields making several different actions. Using AMD's Cloud AI training GPUs, we were able to increase the accuracy of our yolov5 model exponetially and make our robot as accurate as possible.",
+    github: "https://github.com/superiorcave/HackClubPrototypePokerRobot",
+    media: {
+      type: "iframe",
+      src: "https://drive.google.com/file/d/1AtRoi2FTZ7aZQxGRw5f4dSL-5Zksno_m/preview",
+    },
   },
   {
     id: '17b',
@@ -122,6 +205,18 @@ export const projects: Project[] = [
       type: 'image',
       src: 'https://raw.githubusercontent.com/TaniWanKenobi/Robby-Fischer/main/outputs/captured_images/opencv__dev_video2.png'
     }
+  },
+  {
+    id: "21",
+    name: "Smorebot",
+    members: ["Kaylee", "Jane", "Tyler"],
+    description:
+      "Smorebot is a project which uses a Hugging Face Le Robot arm with AI and other Hardware to make the perfect Smores!",
+    github: "https://github.com/kaylz-d/smorebot",
+    media: {
+      type: "video",
+      src: "https://youtube.com/embed/Y920YvBZafg",
+    },
   },
   {
     id: '22',

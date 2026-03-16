@@ -40,6 +40,8 @@
         <div class="dialog-media">
             {#if project.media.type === 'video'}
                 <video src={project.media.src} controls playsinline preload="metadata"><track kind="captions"/></video>
+            {:else if project.media.type === 'iframe'}
+                <iframe src={project.media.src} title=""></iframe>
             {:else}
                 <img src={project.media.src} alt={project.name}/>
             {/if}
@@ -111,21 +113,8 @@
         background-color: var(--scroll-color);
         border: 3px solid var(--scroll-color);
         box-shadow: 3px 3px 0 var(--scroll-color);
-        /* transition: transform 0.4s ease, opacity 0.3s ease; */
         transform-origin: center center;
         gap: 3px;
-        /* transform: scale(0.1); */
-        /* opacity: 0; */
-    }
-
-    .dialog.visible {
-        /* transform: scale(1); */
-        /* opacity: 1; */
-    }
-
-    .dialog.closing {
-        /* transform: scale(0.1);
-        opacity: 0; */
     }
 
     .dialog-media, .dialog-info {
@@ -171,7 +160,6 @@
         margin-bottom: 0.25rem;
     }
 
-
     .member {
         display: inline-block;
         padding: 0.2rem 0.5rem;
@@ -203,5 +191,4 @@
         transform: translate(2px, 2px);
         box-shadow: 1px 1px 0 color-mix(in srgb, var(--scroll-color) 80%, white 20%);
     }
-
 </style>

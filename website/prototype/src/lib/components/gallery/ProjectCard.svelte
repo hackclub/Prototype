@@ -10,6 +10,10 @@
         <source src="{project.media.src}#t=0.1" type="video/mp4">
       </video>
       <div class="play-badge">▶</div>
+    {:else if project.media.type === 'iframe'}
+      <div class="placeholder-grid">
+        <div class="play-badge">▶</div>
+      </div>
     {:else}
       <img src={project.media.src} alt={project.name} loading="lazy">
     {/if}
@@ -80,6 +84,17 @@
     transform: scale(1.04);
   }
   
+  .placeholder-grid {
+    width: 100%;
+    height: 100%;
+    background-color: var(--scroll-color);
+    background-image:
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 1.5rem 1.5rem; 
+
+  }
+
   .play-badge {
     position: absolute;
     top: 50%;
