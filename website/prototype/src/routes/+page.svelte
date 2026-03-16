@@ -28,26 +28,26 @@
         <p>Hackers took home incredible prizes, including AI PCs powered by AMD Ryzen AI Processors, Hugging Face Le Robot arms, 3D printers, and scholarships. The completed projects and their student descriptions are listed below.</p>
       </div>
       <PopImg images={[
-        {src: "https://cdn.hackclub.com/019cf85b-104c-7505-9f04-a7df5aeffff4/IMG_6807.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85a-19f1-7bde-901c-2740134aa8ea/HPIM2070.JPG", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85a-0a4d-7691-aecb-508e61b80ecd/IMG_0941.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf859-fc9c-7615-a2bc-2185f60d3811/123_1.jpeg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf859-ef50-71cc-a9b3-b64992fef68d/IMG_6684.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf859-d442-79ba-b5d5-dedc8a050958/IMG_6790.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf859-bb14-734f-b420-31906648739f/HPIM2041.JPG", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf859-9b53-7c08-a236-666775f8da79/IMG_4428.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf859-8942-7fc0-867a-7531303dfe99/IMG_4427.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85b-20a7-7c89-b46d-fd482e23750b/Screenshot.png", alt: "alt text"}
+        {src: "https://cdn.hackclub.com/019cf85b-104c-7505-9f04-a7df5aeffff4/IMG_6807.jpg", alt: "photographer observes Hack-a-Mole project"},
+        {src: "https://cdn.hackclub.com/019cf85a-19f1-7bde-901c-2740134aa8ea/HPIM2070.JPG", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf85a-0a4d-7691-aecb-508e61b80ecd/IMG_0941.jpg", alt: "10 Bambu 3D printers in use"},
+        {src: "https://cdn.hackclub.com/019cf859-fc9c-7615-a2bc-2185f60d3811/123_1.jpeg", alt: "selfie of AMD/Hack Club employees"},
+        {src: "https://cdn.hackclub.com/019cf859-ef50-71cc-a9b3-b64992fef68d/IMG_6684.jpg", alt: "slideshow presentation of Blueprint stats (13000 teenagers, 6000 projects made, 121 countries)"},
+        {src: "https://cdn.hackclub.com/019cf859-d442-79ba-b5d5-dedc8a050958/IMG_6790.jpg", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf859-bb14-734f-b420-31906648739f/HPIM2041.JPG", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf859-9b53-7c08-a236-666775f8da79/IMG_4428.jpg", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf859-8942-7fc0-867a-7531303dfe99/IMG_4427.jpg", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf85b-20a7-7c89-b46d-fd482e23750b/Screenshot.png", alt: "screenshot of AI training platform"}
       ]}/>    
     </div>
     <div class="info-item">
       <PopImg images={[
-        {src: "https://cdn.hackclub.com/019cf85e-02cf-7b61-965b-a531afde1770/HPIM2061.JPG", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85e-588d-73a8-85f4-d5ec4311d160/HPIM2074.JPG", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85e-47e3-708e-8032-78502ffcd317/HPIM2060.JPG", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85e-6942-7b90-8324-396847f49021/IMG_4589.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85e-3b8a-7f67-b6b7-33ac44151b00/IMG_20251219.jpg", alt: "alt text"},
-        {src: "https://cdn.hackclub.com/019cf85e-34bd-79d6-8586-cb50232d52eb/HPIM2057.JPG", alt: "alt text"},
+        {src: "https://cdn.hackclub.com/019cf85e-02cf-7b61-965b-a531afde1770/HPIM2061.JPG", alt: "s'more project team picture"},
+        {src: "https://cdn.hackclub.com/019cf85e-588d-73a8-85f4-d5ec4311d160/HPIM2074.JPG", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf85e-47e3-708e-8032-78502ffcd317/HPIM2060.JPG", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf85e-6942-7b90-8324-396847f49021/IMG_4589.jpg", alt: "robot arm dumps rose petals"},
+        {src: "https://cdn.hackclub.com/019cf85e-3b8a-7f67-b6b7-33ac44151b00/IMG_20251219.jpg", alt: ""},
+        {src: "https://cdn.hackclub.com/019cf85e-34bd-79d6-8586-cb50232d52eb/HPIM2057.JPG", alt: ""},
         {src: "https://m.media-amazon.com/images/I/61rE1xp-8jL._AC_UF894,1000_QL80_.jpg", alt: "seal plush easter egg"}
       ]}/>
       <div class="info-text">
