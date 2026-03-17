@@ -6,7 +6,9 @@
   import type { Project } from '$lib/components/gallery/data';
   import PopImg from '$lib/components/PopImg.svelte';
   import prototype_logo from '$lib/assets/prototype_logo.webp'
+  import { fade } from 'svelte/transition';
   let selectedProject: Project | null = null;
+  let opacity = 0;
 </script>
 
 <main>
@@ -54,7 +56,7 @@
         	<p>Prototype is a part of AMD's commitment to the <a href="https://www.whitehouse.gov/edai/">AI Education Pledge to America's Youth</a>, empowering the next generation of builders to learn and create with AI.</p>
           <p>The winners of Prototype were given the opportunity to be recognized as part of AMD’s <b>CES 2026 keynote livestream</b>. Check it out!</p>
           <div class="info-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/28cWcxYd6Tk?si=y_czZa5z0EcU9NUr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="1120" height="630" src="https://www.youtube.com/embed/28cWcxYd6Tk?si=y_czZa5z0EcU9NUr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
       </div>
     </div>
@@ -68,6 +70,8 @@
   <footer>
     <h3>Site made with ❤︎ by <a href="https://byjoysu.com" target="_blank">Joy Su</a></h3>
     <p><a href="https://hackclub.com">Hack Club</a> | <a href="https://amd.com">AMD</a></p>
+    <!-- svelte-ignore a11y_click_events_have_key_events, svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <img src="/.png" class="misc" on:click={() => opacity = 1} style="opacity: {opacity}" alt=""/>
   </footer>
 </main>
 
@@ -150,6 +154,13 @@
     gap: 2rem;
   }
 
+  @media (max-width: 852px) {
+    .info-item {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .info-video {
     background-color: color-mix(in srgb, var(--scroll-color) 85%, white);
     background-image:
@@ -158,13 +169,25 @@
     background-size: 1.67rem 1.67rem; 
     padding: 1rem;
     border-radius: 1rem / 0.5rem;
-    width: fit-content;
-  }
-  iframe {
-    width: 100%;
-    height: auto;
     aspect-ratio: 16/9;
-    max-width: 560px;
+    width: 90%;
+    display: inline-flex;
+  }
+  
+  iframe {
+    flex-grow: 1;
+    width: 200%;
+    max-width: 1120px;
+    height: auto;
+    flex-grow: 1;
+    /* max-width: 50vw; */
+    aspect-ratio: 16/9;
+  }
+  
+  .misc {
+    max-width: 5rem;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
   }
 
   footer {
