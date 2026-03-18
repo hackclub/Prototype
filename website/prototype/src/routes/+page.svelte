@@ -100,7 +100,7 @@
   }
 
   :global(h2, h3) {
-    font-family: 'R&C Basic Full Bold', sans-serif; 
+    font-family: 'R&C Basic Full Bold', 'DM Mono', sans-serif; 
   }
 
   :global(p) {

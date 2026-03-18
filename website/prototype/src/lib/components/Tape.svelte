@@ -3,23 +3,23 @@
 <div class="tape-wrapper">
   <div class="tape" style="transform: rotate(-6.7deg)">
     <div class="text-wrapper">
-      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 72 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 72 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 72 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
     </div>
   </div>
   <div class="tape" style="transform: rotate(6.7deg)">
     <div class="text-wrapper">
-      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
-      <span>| 68 TEENS | 27 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 72 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 72 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
+      <span>| 68 TEENS | 72 HOURS | 1,000+ LBS OF HARDWARE | ∞ MEMORIES MADE&nbsp;</span>
   </div>
 </div>
 </div>
 
 <style>
   span {
-    font-family: 'R&C Basic Full Bold', sans-serif;
+    font-family: 'R&C Basic Full Bold', 'DM Mono', sans-serif;
     font-size: 1.5rem;
     color: white;
   }

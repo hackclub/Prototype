@@ -164,7 +164,7 @@
         display: inline-block;
         padding: 0.2rem 0.5rem;
         background-color: color-mix(in srgb, var(--scroll-color) 80%, white 20%);
-        font-family: 'R&C Basic Full Bold', sans-serif;
+        font-family: 'R&C Basic Full Bold', 'DM Mono', sans-serif;
         color: white;
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
@@ -175,7 +175,7 @@
         border: var(--scroll-color);
         color: white;
         /* border: 3px solid var(--scroll-color); */
-        font-family: 'R&C Basic Full Bold', sans-serif;
+        font-family: 'R&C Basic Full Bold', 'DM Mono', sans-serif;
         box-shadow: 3px 3px 0 color-mix(in srgb, var(--scroll-color) 80%, white 20%);
         padding: 0.5rem 1rem;
         transition: transform 0.1s ease box-shadow 0.1s ease;

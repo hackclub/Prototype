@@ -73,7 +73,7 @@
   }
 
   p {
-    font-family: 'R&C Basic Full Bold', sans-serif !important;
+    font-family: 'R&C Basic Full Bold', 'DM Mono', sans-serif !important;
   }
 
   .scroll-tracker {
